@@ -1,6 +1,18 @@
 """Restaurant rating lister."""
 import sys
+
 input_file = open(sys.argv[1])
+
+def print_rating():
+    rating_dict = {}
+    for line in input_file:
+        name, rating = line.rstrip().split(":")
+        rating_dict[name] = rating
+
+    sorted_dict = sorted(rating_dict.keys())
+    for key in sorted_dict: 
+        print(f"{key} is rated at {rating_dict[key]}")
+    return
 
 while True:
     print("what would you like to do ?")
@@ -23,19 +35,8 @@ while True:
             #print_rating()
             #rating_dict[restaurant_name] = int(restaurant_rating)
 
-def print_rating():
-    rating_dict = {}
-    for line in input_file:
-        name, rating = line.rstrip().split(":")
-        rating_dict[name] = rating
-    
 
-    def sorting(): 
-        sorted_dict = sorted(rating_dict.keys())
-        for key in sorted_dict: 
-            print(f"{key} is rated at {rating_dict[key]}")
-        return
-    return
+
 
 input_file.close()
 
