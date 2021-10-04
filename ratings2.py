@@ -30,12 +30,12 @@ def print_rating():
         rating_dict[name] = rating
     
 
-    def sorting(): 
-        sorted_dict = sorted(rating_dict.keys())
-        for key in sorted_dict: 
-            print(f"{key} is rated at {rating_dict[key]}")
-        return
-    return
+#def sorting(): 
+    sorted_dict = sorted(rating_dict.keys())
+    for key in sorted_dict: 
+        print(f"{key} is rated at {rating_dict[key]}")
+    # return
+return
 
 input_file.close()
 
