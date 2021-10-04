@@ -19,24 +19,24 @@ while True:
         restaurant_rating = input("What is their rating? Choose an integer between 1 and 5. ")
         if 5 < int(restaurant_rating) < 1:
            input("Please re-enter the rating !\n")
-        else:
-            def add_to_dict():
-                print_rating()
-                rating_dict[restaurant_name] = int(restaurant_rating)
-
+        #else:
+            #print_rating()
+            #rating_dict[restaurant_name] = int(restaurant_rating)
 
 def print_rating():
     rating_dict = {}
     for line in input_file:
         name, rating = line.rstrip().split(":")
         rating_dict[name] = rating
-    input_file.close()
     
-    sorted_dict = sorted(rating_dict.keys())
-    for key in sorted_dict: 
-        print(f"{key} is rated at {rating_dict[key]}")
+
+    def sorting(): 
+        sorted_dict = sorted(rating_dict.keys())
+        for key in sorted_dict: 
+            print(f"{key} is rated at {rating_dict[key]}")
+        return
     return
 
-
+input_file.close()
 
 
