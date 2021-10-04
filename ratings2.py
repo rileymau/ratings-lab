@@ -17,10 +17,6 @@ sorted_dict = sorted(rating_dict.keys())
 for key in sorted_dict: 
       print(f"{key} is rated at {rating_dict[key]}")
 
-# ask staff during 
-#new_dict[old key] = old key value ? 
-#for key in new_dict_keys:
-#    new_dict[key] = rating_dict[key]
-#print(new_dict)
+
 
 
